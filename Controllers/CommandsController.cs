@@ -22,7 +22,7 @@ namespace micmdapp.Controllers
             return _context.CommandItems;
         }
 
-         //GET:      api/commands/n
+         //GET:  api/commands/n
         [HttpGet("{id}")]
         public ActionResult<Command> GetCommandItem(int id)
         {
@@ -34,7 +34,7 @@ namespace micmdapp.Controllers
              return commandItem;
         }
 
-         //POST:     api/commands
+         //POST: api/commands
         [HttpPost]
         public ActionResult<Command> PostCommandItem(Command command)
         {
@@ -44,7 +44,6 @@ namespace micmdapp.Controllers
         }
 
          //PUT:      api/commands/n
-
         [HttpPut("{id}")]
         public ActionResult PutCommandItem(int id, Command command)
         {
