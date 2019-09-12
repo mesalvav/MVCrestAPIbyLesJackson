@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace micmdapp.Controllers
 {
+    
     [Route("api/[Controller]")]
     [ApiController]
     public class CommandsController : ControllerBase
@@ -18,11 +19,11 @@ namespace micmdapp.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Command>> Get()
         {
-            // return new string[] { "this", "fake", "datas" };
+            //  return new string[] { "this", "fake", "datas" };
             return _context.CommandItems;
         }
 
-         //GET:  api/commands/n
+         //GET: api/commands/n
         [HttpGet("{id}")]
         public ActionResult<Command> GetCommandItem(int id)
         {
