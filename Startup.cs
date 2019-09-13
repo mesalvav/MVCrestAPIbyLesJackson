@@ -25,7 +25,7 @@ namespace micmdapp
         {
             services.AddDbContext<CommandContext>
                 // (opt => opt.UseSqlServer(Configuration["Data:CommandAPIConnection:ConnectionString"]));
-                (opt => opt.UseSqlServer("Server=tcp:meaervidor.database.windows.net,1433;Initial Catalog=CmdAPI;Persist Security Info=False;User ID=entrar;Password=ramondenica1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+                 (opt => opt.UseSqlServer(System.Configuration.ConfigurationManager.ConnectionStrings["defaultConnection"].ConnectionString);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_0);
         }
 
